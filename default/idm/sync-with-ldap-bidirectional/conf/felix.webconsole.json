@@ -1,4 +1,17 @@
 {
-  "username" : "admin",
-  "password" : "admin"
+    "username" : "admin",
+    "password" : {
+        "$crypto" : {
+            "type" : "x-simple-encryption",
+            "value" : {
+                "cipher" : "AES/CBC/PKCS5Padding",
+                "salt" : "SjiNxUBHK0oty37idoZkgw==",
+                "data" : "UougZd2ycCAEtxpTAh8QZQ==",
+                "keySize" : 16,
+                "iv" : "7RhoMbLoMHLHGsY0j8IoqQ==",
+                "key" : "openidm-sym-default",
+                "mac" : "zTne9+gn07JUHtSE8fvawg=="
+            }
+        }
+    }
 }
